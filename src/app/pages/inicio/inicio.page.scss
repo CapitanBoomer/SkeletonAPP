@@ -1,0 +1,15 @@
+.compania{font-weight: 600;}
+h1{font-weight: 600;}
+.bienvenida{font-weight: 550;text-align: center;}
+
+ion-item {
+  --padding-start: 0;
+}
+
+/* iOS places the subtitle above the title */
+ion-card-header.ios {
+  display: flex;
+  flex-flow: column-reverse;
+}
+.div{display:grid;
+place-items: center;}
