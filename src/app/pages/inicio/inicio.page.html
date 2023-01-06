@@ -17,13 +17,14 @@
           <ion-label position="stacked">Usuario</ion-label>
           <ion-input type="text" placeholder="Ingrese su usuario" name="nombre" [(ngModel)]="nombre" minlength="3" maxlength="8"></ion-input>
         </ion-item>
+
         <ion-item>
           <ion-label position="stacked">contraseña</ion-label>
           <ion-input type="password" placeholder="***** " minlength="4" maxlength="4" name="contra" [(ngModel)]="contra"></ion-input>
         </ion-item>
         <div class="div">
 
-          <ion-button size="default" color="dark" fill="outline" (click)="ingreso()">ingresar</ion-button>
+          <ion-button size="default" color="dark" fill="outline" (click)="navegarQuery()">ingresar</ion-button>
 
         </div>
 </ion-list>

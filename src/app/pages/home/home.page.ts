@@ -7,7 +7,7 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-  public nombre: string = '';
+  public usuu: string = '';
   desarrollador: string = 'CapBoom';
   public user: string = '';
   public apellido: string = '';
@@ -20,16 +20,17 @@ export class HomePage implements OnInit {
 
 
   ionViewWillEnter(
-  ) { this.nombre = this.homeroute.snapshot.paramMap.get('nombre') || 'sin nombre'; }
+  ) { //this.nombre = this.homeroute.snapshot.paramMap.get('nombre') || 'sin nombre';
+  this.homeroute.queryParams.subscribe(parametros=>{this.usuu = parametros['usu']||'nada'}) }
 
 
-  async alerta() {
-    const alert = await this.alertController.create({
-      header: this.nombre,
-      message: 'su nombre es:'+this.user+' '+this.apellido,
-      buttons: ['yes'],
-    });
+  // async alerta() {
+  //   const alert = await this.alertController.create({
+  //     header: this.nombre,
+  //     message: 'su nombre es:'+this.user+' '+this.apellido,
+  //     buttons: ['yes'],
+  //   });
 
-    await alert.present();
-  }
+  //   await alert.present();
+  // }
 }

@@ -13,7 +13,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
-    path: 'casa/:nombre/:contra',
+    path: 'casa',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
 ];

@@ -12,8 +12,19 @@ public contra: string ='';
 
   ngOnInit() {
   }
-public ingreso()
-{
-this.userrouter.navigate(['/casa',this.nombre,this.contra])
+// public ingreso()
+// {
+// this.userrouter.navigate(['/casa',this.nombre])
+// }
+public navegarQuery() {
+  this.userrouter.navigate
+    (
+      ['/casa'],
+      {
+        queryParams: {
+          usu: this.nombre
+        }
+      }
+    )
 }
 }
